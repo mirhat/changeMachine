@@ -83,6 +83,7 @@ class CoinsStockEdit extends Component {
                         <Form.Control
                             name="denomination"
                             type="number"
+                            disabled={this.state.isEdit}
                             defaultValue={this.state.values.denomination != null ? Number(this.state.values.denomination) : null}
                             onChange={this.handleChange}
                             isInvalid={!!this.state.errors.denomination}
