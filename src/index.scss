@@ -1,0 +1,29 @@
+.icon-button {
+  background-color: rgba(0,0,0,0);
+  box-shadow: unset;
+  border: 0;
+}
+
+.mr-2 {
+    margin-right: 10px;
+}
+
+.invalid-input {
+  border-color: #dc3545;  
+}
+
+.invalid-text {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.checkout-result {
+  margin-top: 60px;
+  .checkout-result-label{
+    font-weight: bold;
+    padding: 10px;
+  }
+  ul {
+
+  }
+}
