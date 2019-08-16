@@ -12,7 +12,7 @@ function getChange(sum, coins) {
     var coinIndex = 0;
     sum = Number(((sum / coins[coins.length - 1].denomination) * coins[coins.length - 1].denomination).toFixed(2));
 
-    while (sum > 0 && coinIndex < coins.length) {        
+    while (sum > 0 && coinIndex < coins.length) {
         const value = coins[coinIndex].denomination;
         const numberOfItems = coins[coinIndex].numberOfItems;
         const coinChange = Number((Math.floor(sum / value) * value).toFixed(2));
@@ -26,8 +26,9 @@ function getChange(sum, coins) {
             result.change.push({
                 coin: value,
                 numberOfItems: numberOfChangeItems
-            })
+            })            
             sum -= numberOfChangeItems * value;
+            sum = sum.toFixed(2);
         }
         coinIndex++;
     }
