@@ -1,4 +1,6 @@
 function getChange(sum, coins) {
+    const initialSum = sum;
+    
     if (coins.length < 1 || sum < 0) {
         return {
             isOk: false,
@@ -31,9 +33,13 @@ function getChange(sum, coins) {
             sum = sum.toFixed(2);
         }
         coinIndex++;
-    }
+    }    
 
     if (sum > 0.001) {
+        if (coins.length > 1) {
+            coins.splice(0, 1);
+            return getChange(initialSum, coins);
+        }
         return {
             isOk: false,
             change: [],
